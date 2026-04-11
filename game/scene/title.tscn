@@ -20,13 +20,45 @@ offset_right = 1120.0
 offset_bottom = 240.0
 color = Color(1, 1, 0, 1)
 
+[node name="TextStart" type="Label" parent="." unique_id=1604600670]
+offset_left = 180.0
+offset_top = 180.0
+offset_right = 416.0
+offset_bottom = 225.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+text = "Start Game"
+
 [node name="ButtonCollection" type="ColorRect" parent="." unique_id=359499773]
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = 160.0
+offset_top = 240.0
+offset_right = 1120.0
+offset_bottom = 320.0
+
+[node name="TextCollection" type="Label" parent="." unique_id=1724035327]
+offset_left = 180.0
+offset_top = 260.0
+offset_right = 416.0
+offset_bottom = 305.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+text = "Collection"
 
 [node name="ButtonErase" type="ColorRect" parent="." unique_id=266080499]
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = 160.0
+offset_top = 320.0
+offset_right = 1120.0
+offset_bottom = 400.0
+color = Color(1, 1, 0, 1)
+
+[node name="TextErase" type="Label" parent="." unique_id=152774855]
+offset_left = 180.0
+offset_top = 340.0
+offset_right = 416.0
+offset_bottom = 385.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+text = "Erase Data"
 
 [node name="ButtonQuit" type="ColorRect" parent="." unique_id=555047446]
 offset_left = 160.0
@@ -34,9 +66,20 @@ offset_top = 400.0
 offset_right = 1120.0
 offset_bottom = 480.0
 
+[node name="TextQuit" type="Label" parent="." unique_id=1152242213]
+offset_left = 180.0
+offset_top = 420.0
+offset_right = 416.0
+offset_bottom = 465.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+text = "Quit Game"
+
 [node name="ButtonStart5" type="ColorRect" parent="." unique_id=1779572822]
+visible = false
 offset_right = 40.0
 offset_bottom = 40.0
 
 [connection signal="gui_input" from="ButtonStart" to="." method="_on_button_start_gui_input"]
+[connection signal="gui_input" from="ButtonCollection" to="." method="_on_button_collection_gui_input"]
 [connection signal="gui_input" from="ButtonQuit" to="." method="_on_button_quit_gui_input"]

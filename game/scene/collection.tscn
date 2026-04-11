@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://bhyf7s1shbs0b"]
+
+[ext_resource type="Script" uid="uid://dvj12dweiq6dp" path="res://script/scene/collection.gd" id="1_vdy28"]
+
+[node name="Collection" type="Node2D" unique_id=1007295042]
+script = ExtResource("1_vdy28")
+
+[node name="ButtonBack" type="ColorRect" parent="." unique_id=58056472]
+offset_left = 1180.0
+offset_top = 20.0
+offset_right = 1260.0
+offset_bottom = 100.0
+
+[connection signal="gui_input" from="ButtonBack" to="." method="_on_button_back_gui_input"]
