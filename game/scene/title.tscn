@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://dq8dqiuly87nu"]
+
+[ext_resource type="Script" uid="uid://jniwfw8msulo" path="res://script/scene/title.gd" id="1_4fdtc"]
+
+[node name="Title" type="Node2D" unique_id=1667489438]
+script = ExtResource("1_4fdtc")
+
+[node name="TextTitle" type="Label" parent="." unique_id=792449657]
+offset_left = 20.0
+offset_top = 20.0
+offset_right = 256.0
+offset_bottom = 65.0
+theme_override_font_sizes/font_size = 32
+text = "Moving Garden"
+
+[node name="ButtonStart" type="ColorRect" parent="." unique_id=703441890]
+offset_left = 160.0
+offset_top = 160.0
+offset_right = 1120.0
+offset_bottom = 240.0
+color = Color(1, 1, 0, 1)
+
+[node name="ButtonCollection" type="ColorRect" parent="." unique_id=359499773]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ButtonErase" type="ColorRect" parent="." unique_id=266080499]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ButtonQuit" type="ColorRect" parent="." unique_id=555047446]
+offset_left = 160.0
+offset_top = 400.0
+offset_right = 1120.0
+offset_bottom = 480.0
+
+[node name="ButtonStart5" type="ColorRect" parent="." unique_id=1779572822]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[connection signal="gui_input" from="ButtonStart" to="." method="_on_button_start_gui_input"]
+[connection signal="gui_input" from="ButtonQuit" to="." method="_on_button_quit_gui_input"]
