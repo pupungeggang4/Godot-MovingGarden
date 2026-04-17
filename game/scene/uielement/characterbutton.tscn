@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://bp3t4xo4thjt6"]
+
+[ext_resource type="Script" uid="uid://bvlavsn3o04e5" path="res://script/uielement/characterbutton.gd" id="1_3iml1"]
+
+[node name="Characterbutton" type="Button" unique_id=709110413]
+script = ExtResource("1_3iml1")

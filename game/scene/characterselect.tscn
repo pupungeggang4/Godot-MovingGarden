@@ -5,10 +5,55 @@
 [node name="Characterselect" type="Node2D" unique_id=66099592]
 script = ExtResource("1_2usxj")
 
-[node name="ButtonBack" type="ColorRect" parent="." unique_id=334934689]
-offset_left = 1180.0
+[node name="UI" type="Control" parent="." unique_id=717583573]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TextTitle" type="Label" parent="UI" unique_id=2004100121]
+layout_mode = 0
+offset_left = 20.0
 offset_top = 20.0
-offset_right = 1260.0
+offset_right = 273.0
+offset_bottom = 65.0
+theme_override_font_sizes/font_size = 32
+text = "Select Character"
+
+[node name="ButtonBack" type="Button" parent="UI" unique_id=1998067153]
+layout_mode = 0
+offset_left = 700.0
+offset_top = 20.0
+offset_right = 780.0
 offset_bottom = 100.0
 
-[connection signal="gui_input" from="ButtonBack" to="." method="_on_button_back_gui_input"]
+[node name="ButtonStart" type="Button" parent="UI" unique_id=1340466826]
+layout_mode = 0
+offset_left = 620.0
+offset_top = 500.0
+offset_right = 780.0
+offset_bottom = 580.0
+theme_override_font_sizes/font_size = 32
+text = "Start"
+
+[node name="CharacterButtons" type="Control" parent="UI" unique_id=750888824]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="DescriptionArea" type="ColorRect" parent="UI" unique_id=921424520]
+layout_mode = 0
+offset_left = 440.0
+offset_top = 120.0
+offset_right = 780.0
+offset_bottom = 380.0
+
+[node name="DescriptionText" type="RichTextLabel" parent="UI" unique_id=678957288]
+layout_mode = 0
+offset_left = 440.0
+offset_top = 120.0
+offset_right = 780.0
+offset_bottom = 380.0
+
+[connection signal="button_up" from="UI/ButtonBack" to="." method="_on_button_back_button_up"]
+[connection signal="pressed" from="UI/ButtonStart" to="." method="_on_button_start_pressed"]
