@@ -26,3 +26,4 @@ func _on_button_start_pressed() -> void:
 
 func on_character_button_click(button: Node) -> void:
     selected_character = button.id
+    get_node("UI/DescriptionText").text = "%d selected!" % [selected_character]

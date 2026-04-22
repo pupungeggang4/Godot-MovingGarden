@@ -1,3 +1,26 @@
 [gd_scene format=3 uid="uid://0dbolwbm3vql"]
 
+[ext_resource type="Script" uid="uid://c748hsb1tsmi7" path="res://script/scene/ready.gd" id="1_y33uh"]
+[ext_resource type="PackedScene" uid="uid://dtl3hlt3t6oyg" path="res://scene/subscene/menu.tscn" id="2_jqyrb"]
+
 [node name="Ready" type="Node2D" unique_id=2054942881]
+script = ExtResource("1_y33uh")
+
+[node name="UI" type="Control" parent="." unique_id=569097618]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Menu" parent="UI" unique_id=1201263890 instance=ExtResource("2_jqyrb")]
+visible = false
+layout_mode = 1
+
+[node name="ButtonMenu" type="Button" parent="UI" unique_id=1884017792]
+layout_mode = 0
+offset_left = 740.0
+offset_top = 20.0
+offset_right = 780.0
+offset_bottom = 60.0
+
+[connection signal="button_up" from="UI/ButtonMenu" to="." method="_on_button_menu_button_up"]

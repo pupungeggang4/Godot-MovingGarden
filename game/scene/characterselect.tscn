@@ -54,6 +54,7 @@ offset_left = 440.0
 offset_top = 120.0
 offset_right = 780.0
 offset_bottom = 380.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
 
 [connection signal="button_up" from="UI/ButtonBack" to="." method="_on_button_back_button_up"]
 [connection signal="pressed" from="UI/ButtonStart" to="." method="_on_button_start_pressed"]
